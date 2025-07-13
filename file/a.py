@@ -1,0 +1,18 @@
+def pal(s):
+    v=""
+    for i in s:
+        if i.isalpha():
+            v+=i.lower()
+            
+    i=0
+    j=len(v)-1
+    while i<j:
+        if v[i]!=v[j]:
+            return "notpal"
+        
+        i+=1
+        j-=1
+    return "pal"
+   
+s = "A man, a plan, a canal: Panama"    
+print(pal(s))
